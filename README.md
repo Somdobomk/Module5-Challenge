@@ -32,6 +32,10 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-Cyberpunk themed buttons from [Codepen Cyberpunk](https://codepen.io/jh3y/pen/PoGbxLp)
+## Cyberpunk themed buttons from
 
-Cyberpunk themed css palette from [Colour Lovers](https://www.colourlovers.com/palette/4775628/Cyberpunk_2077)
+[Codepen Cyberpunk](https://codepen.io/jh3y/pen/PoGbxLp)
+
+## Cyberpunk themed css palette from
+
+[Colour Lovers](https://www.colourlovers.com/palette/4775628/Cyberpunk_2077)
