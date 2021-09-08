@@ -9,7 +9,6 @@
 }
 
 header {
-	font-size: 2rem;
 	border-bottom-width: 10px;
 }
 
@@ -21,6 +20,19 @@ body {
 	min-height: 100vh;
 	font-family: 'Cyber', sans-serif;
 	background: #fbe900;
+	font-size: 1.5rem;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h5 {
+	font-size: 2rem;
+}
+
+h6 {
+	font-size: 1.5rem;
 }
 
 body .cybr-btn + .cybr-btn {
@@ -39,7 +51,7 @@ body .cybr-btn + .cybr-btn {
 	--color: #efdf00;
 	--font-size: 26px;
 	--shadow-primary-hue: 180;
-	--label-size: 9px;
+	--label-size: 12px;
 	--shadow-secondary-hue: 60;
 	--shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
 	--clip: polygon(
@@ -315,6 +327,6 @@ textarea {
 }
 
 .future-hour {
-	background-color: #4300eb;
-	border-color: #4300eb;
+	background-color: #1e1e1e;
+	border-color: #1e1e1e;
 }
