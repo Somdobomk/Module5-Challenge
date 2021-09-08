@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Work Day Scheduler</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<header class="container md">
+			<div class="row justify-content-md-center">
+				<div class="col-md-auto">
+					<h1>Work Day Scheduler</h1>
+				</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-auto">
+					<h5>A Calendar to Schedule Your Workday</h5>
+				</div>
+			</div>
+			<div class="row justify-content-md-center" id="date-today">
+				<div class="col-md-auto"><h6></h6></div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div
+				id="calendar-row1"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time1" class="col-md-1">8 AM</div>
+				<textarea rows="3" id="text-entry1" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row2"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time2" class="col-md-1">9 AM</div>
+				<textarea rows="3" id="text-entry2" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row3"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time3" class="col-md-1">10 AM</div>
+				<textarea rows="3" id="text-entry3" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row4"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time4" class="col-md-1">11 AM</div>
+				<textarea rows="3" id="text-entry4" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row5"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time5" class="col-md-1">12 PM</div>
+				<textarea rows="3" id="text-entry5" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row6"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time6" class="col-md-1 time">1 PM</div>
+				<textarea rows="3" id="text-entry6" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row7"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time7" class="col-md-1 time">2 PM</div>
+				<textarea rows="3" id="text-entry7" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row8"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time8" class="col-md-1">3 PM</div>
+				<textarea rows="3" id="text-entry8" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row9"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time9" class="col-md-1">4 PM</div>
+				<textarea rows="3" id="text-entry9" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+
+			<div
+				id="calendar-row10"
+				class="
+					row
+					justify-content-md-center
+					border-top border-bottom
+					calendar-row
+				"
+			>
+				<div id="time10" class="col-md-1">5 PM</div>
+				<textarea rows="3" id="text-entry10" class="col-md-10"></textarea>
+				<button id="save" class="col-md-1 cybr-btn">
+					Save<span aria-hidden>_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__glitch">Save_</span>
+					<span aria-hidden class="col-md-1 cybr-btn__tag">R25</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<footer class="row"><br /><br /></footer>
+		</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+			integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="./assets/js/script.js"></script>
+	</body>
+</html>
