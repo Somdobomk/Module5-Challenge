@@ -320,11 +320,13 @@ textarea {
 .past-hour {
 	background-color: #efdf00;
 	border-color: #efdf00;
+	color: #1e1e1e;
 }
 
 .present-hour {
 	background-color: #ea00d9;
 	border-color: #ea00d9;
+	color: #1e1e1e;
 }
 
 .future-hour {
