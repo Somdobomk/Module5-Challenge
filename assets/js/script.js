@@ -12,38 +12,32 @@ let workDay = {
 };
 
 $(document).ready(function () {
-	if (!localStorage.getItem('workDay')) {
-		updateCalendarTasks(workDay);
-	} else {
-		updateCalendarTasks(JSON.parse(localStorage.getItem('workDay')));
-	}
+	$('#add-time').on('click', function () {
+		let time = $('#time').val();
+		let task = $('#task').val();
+		workDay[time] = task;
+		console.log(workDay);
+		$('#time').val('');
+		$('#task').val('');
+		render();
+	});
 });
 
-$('#date-today h6').text(moment().format('dddd, MMMM Do YYYY'));
+$('#date-today h6').text(moment().format('MMMM Do YYYY'));
 
-let counter = 1;
+let counter = 0;
 for (const property in workDay) {
-	let textEntry = '#text-entry' + counter;
-	$(textEntry).text(workDay[property]);
-	let timeId = '#time' + counter;
-	let presentHour = moment().hour();
-	let timeString = $(timeId).text();
-	let timeNumber = hourNumberFromHourString(timeString);
-	if (timeNumber < presentHour) {
-		$(textEntry).addClass('past-hour');
-	} else if (timeNumber > presentHour) {
-		$(textEntry).addClass('future-hour');
-	} else {
-		$(textEntry).addClass('present-hour');
+	if (workDay.hasOwnProperty(property)) {
+		counter++;
 	}
-	counter++;
 }
 
-$('button').click(function () {
-	value = $(this).siblings('textarea').val();
-	hourString = $(this).siblings('div').text();
-
-	saveSchedule(hourString, value);
+$('button').on('click', function () {
+	$('#date-today h6').text(
+		moment().add(counter, 'days').format('MMMM Do YYYY')
+	);
+	counter++;
+	render();
 });
 
 function hourNumberFromHourString(hourString) {
@@ -68,16 +62,26 @@ function hourNumberFromHourString(hourString) {
 			return 16;
 		case '5 PM':
 			return 17;
+		default:
+			return 0;
 	}
 }
 
 function loadCorrectDataset() {
-	result = localStorage.getItem('workDay');
-	return result ? result : workDay;
+	let hourNumber = hourNumberFromHourString(moment().format('hA'));
+	if (hourNumber < 12) {
+		return workDay;
+	} else if (hourNumber < 17) {
+		return workDay;
+	} else {
+		return workDay;
+	}
 }
 
 function initializeLocalStorage() {
-	localStorage.setItem('workDay', JSON.stringify(workDay));
+	if (!localStorage.getItem('workDay')) {
+		localStorage.setItem('workDay', JSON.stringify(workDay));
+	}
 }
 
 function saveToLocalStorage(dayObj) {
@@ -88,16 +92,15 @@ function saveSchedule(hourString, val) {
 	if (!localStorage.getItem('workDay')) {
 		initializeLocalStorage();
 	}
-
-	let workHours = JSON.parse(localStorage.getItem('workDay'));
-	workHours[hourString] = val;
-
-	saveToLocalStorage(workHours);
+	let dayObj = JSON.parse(localStorage.getItem('workDay'));
+	dayObj[hourString] = val;
+	saveToLocalStorage(dayObj);
 }
 
 function updateCalendarTasks(dayObject) {
-	$('.calendar-row').each(function (index) {
-		let res = $(this).children('div');
-		$(this).children('textarea').text(dayObject[res.text()]);
-	});
+	for (const property in dayObject) {
+		if (dayObject.hasOwnProperty(property)) {
+			$(`#${property}`).text(dayObject[property]);
+		}
+	}
 }
